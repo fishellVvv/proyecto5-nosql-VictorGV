@@ -1,0 +1,31 @@
+{
+  "name": "proyecto5-nosql-victorgv",
+  "version": "0.0.1",
+  "description": "Quinto Proyecto, NoSQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fishellVvv/proyecto5-nosql-VictorGV.git"
+  },
+  "keywords": [
+    "node",
+    "http",
+    "routes",
+    "servidor"
+  ],
+  "author": "Victor G. V. (https://fishellvvv.github.io/portfolio/)",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/fishellVvv/proyecto5-nosql-VictorGV/issues"
+  },
+  "homepage": "https://github.com/fishellVvv/proyecto5-nosql-VictorGV#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.2.3"
+  }
+}
