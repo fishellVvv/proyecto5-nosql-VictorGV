@@ -1,12 +1,12 @@
 const express = require("express");
-const { connect } = require("./utils/db");
+const { connect } = require("./src/config/db");
 
 connect();
 
 const PORT = 3000;
 const server = express();
 
-const Movie = require("./models/Movie");
+const Movie = require("./src/api/models/Movie.model");
 
 const router = express.Router();
 
