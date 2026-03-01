@@ -4,8 +4,11 @@ const {
   getAllMovies,
   getMovieById,
   getMovieByTitle,
-  getMoviesByGenre,
   getMoviesByYear,
+  getMoviesByGenre,
+  createMovie,
+  updateMovie,
+  deleteMovie,
 } = require("../controllers/movies.controllers");
 
 const router = express.Router();
@@ -13,7 +16,10 @@ const router = express.Router();
 router.get("/", getAllMovies);
 router.get("/id/:id", getMovieById);
 router.get("/title/:title", getMovieByTitle);
-router.get("/genre/:genre", getMoviesByGenre);
 router.get("/year/:year", getMoviesByYear);
+router.get("/genre/:genre", getMoviesByGenre);
+router.post("/", createMovie);
+router.put("/:id", updateMovie);
+router.delete("/:id", deleteMovie);
 
 module.exports = router;
