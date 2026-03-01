@@ -7,6 +7,7 @@ const PORT = 3000;
 connectDB();
 
 const server = express();
+
 server.use(express.json());
 
 server.use("/api/movies", moviesRouter);

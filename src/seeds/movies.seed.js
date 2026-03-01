@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Movie = require("../api/models/Movie");
+const Movie = require("../api/models/movie.model");
 
 const movies = [
   {
@@ -39,19 +39,24 @@ const movies = [
     genre: "Comedia romántica",
   },
 ];
+
 const movieDocuments = movies.map((movie) => new Movie(movie));
+
+const DB_NAME = "proyecto-basico-express-movies";
+const MONGO_URI = `mongodb://localhost:27017/${DB_NAME}`;
+
 mongoose
-  .connect("mongodb://localhost:27017/proyecto-basico-express-movies")
+  .connect(MONGO_URI)
   .then(async () => {
     const allMovies = await Movie.find();
     if (allMovies.length) {
       await Movie.collection.drop();
     }
   })
-  .catch((err) => console.log(`Error deleting data: ${err}`))
+  .catch((error) => console.log(`Error deleting data: ${error}`))
   .then(async () => {
     await Movie.insertMany(movieDocuments);
-    console.log("DatabaseCreated");
+    console.log("#️⃣  DatabaseCreated");
   })
-  .catch((err) => console.log(`Error creating data: ${err}`))
+  .catch((error) => console.log(`Error creating data: ${error}`))
   .finally(() => mongoose.disconnect());
