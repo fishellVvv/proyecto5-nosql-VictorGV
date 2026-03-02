@@ -94,7 +94,7 @@ const deleteMovie = async (req, res) => {
     if (!deletedMovie || deletedMovie.length === 0) {
       return res.status(404).json("No movie found by this id");
     }
-    return res.status(204).json("Movie deleted successfully");
+    return res.status(200).json("Movie deleted successfully");
   } catch (error) {
     return res.status(500).json(error);
   }
