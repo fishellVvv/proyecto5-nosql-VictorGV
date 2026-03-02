@@ -82,14 +82,13 @@ Body ejemplo (POST `/api/movies`):
 
 ### Actors (`/api/actors`)
 
-| Método | Endpoint                 | Descripción                                   |
-| -----: | ------------------------ | --------------------------------------------- |
-|    GET | `/api/actors`            | Listar todos los actores                      |
-|    GET | `/api/actors/id/:id`     | Obtener actor por ID                          |
-|    GET | `/api/actors/name/:name` | Buscar por nombre (parcial, case-insensitive) |
-|   POST | `/api/actors`            | Crear actor                                   |
-|    PUT | `/api/actors/:id`        | Actualizar actor                              |
-| DELETE | `/api/actors/:id`        | Eliminar actor                                |
+| Método | Endpoint             | Descripción              |
+| -----: | -------------------- | ------------------------ |
+|    GET | `/api/actors`        | Listar todos los actores |
+|    GET | `/api/actors/id/:id` | Obtener actor por ID     |
+|   POST | `/api/actors`        | Crear actor              |
+|    PUT | `/api/actors/:id`    | Actualizar actor         |
+| DELETE | `/api/actors/:id`    | Eliminar actor           |
 
 Body ejemplo (POST `/api/actors`):
 
